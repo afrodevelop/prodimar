@@ -48,7 +48,7 @@ export const CategorySidebar = () => {
                         name={`${section.id}[]`}
                         defaultValue={option.nombre}
                         type="checkbox"
-                        defaultChecked={() => console.log('no implemented')}
+                        defaultChecked={false}
                         className={styled[theme]}
                       />
                       <label
