@@ -1,0 +1,59 @@
+.section-div {
+  @apply relative z-10 flex items-baseline justify-between pt-24 pb-6 border-b border-gray-200;
+  .heading-1 {
+    @apply text-4xl font-bold tracking-tight ;
+    &.primary {
+      @apply text-primary-900;
+    }
+    &.secondary {
+      @apply text-secondary-900;
+    }
+  }
+  .section-div-div {
+    @apply flex items-center;
+    .menu {
+      @apply relative inline-block text-left;
+      .menu-button {
+        @apply inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900;
+        svg {
+          @apply flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400;
+        }
+      }
+    }
+    .menu-items {
+      @apply origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none;
+      > div {
+        @apply py-1;
+        .arcontac {
+          @apply block px-4 py-2 text-sm;
+          &-current-primary {
+            @apply font-medium text-primary-900;
+          }
+          &-current-secondary {
+            @apply font-medium text-secondary-900;
+          }
+          &-no-current {
+            @apply text-gray-500;
+          }
+          &-active {
+            @apply bg-gray-100;
+          }
+        }
+      }
+    }
+  }
+}
+
+.button-grid-list {
+  @apply p-2 -m-2 ml-5 sm:ml-7 text-gray-400 hover:text-gray-500;
+}
+
+.button-funnel {
+  @apply p-2 -m-2 ml-4 sm:ml-6 text-gray-400 hover:text-gray-500 lg:hidden;
+  span {
+    @apply sr-only;
+  }
+  svg {
+    @apply w-5 h-5;
+  }
+}

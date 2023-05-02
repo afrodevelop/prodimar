@@ -1,0 +1,30 @@
+.dialog {
+  @apply relative z-40 lg:hidden;
+  .transition-div {
+    @apply fixed inset-0 bg-black bg-opacity-25;
+  }
+}
+
+.div-content {
+  @apply fixed inset-0 flex z-40;
+}
+
+
+.dialog-panel {
+  @apply ml-auto relative max-w-xs w-full h-full bg-white shadow-xl py-4 pb-12 flex flex-col overflow-y-auto;
+  .dialog-panel-div {
+    @apply px-4 flex items-center justify-between;
+    h2 {
+      @apply text-lg font-medium text-gray-900;
+    }
+    button {
+      @apply -mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400;
+      span {
+        @apply sr-only;
+      }
+      svg {
+        @apply w-6 h-6;
+      }
+    }
+  }
+}

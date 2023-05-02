@@ -1,0 +1,89 @@
+// grid view
+
+.grid-products {
+  @apply grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:col-span-3 lg:gap-x-8 xl:grid-cols-3;
+  .link {
+    @apply text-sm relative rounded-md shadow-md;
+    .div-image {
+      @apply w-full aspect-square rounded-t-lg overflow-hidden bg-gray-100 group-hover:opacity-75;
+      .image {
+        @apply w-full h-full object-center object-cover;
+      }
+    }
+    .heart {
+      @apply absolute right-2 top-2 p-2 border-solid rounded-full w-9 h-9;
+      &.primary {
+        @apply bg-indigo-200;
+        svg {
+          @apply h-5 w-5 text-primary-900;
+        }
+      }
+      &.secondary {
+        @apply bg-yellow-50;
+        svg {
+          @apply h-5 w-5 text-secondary-900;
+        }
+      }
+    }
+    .content {
+      @apply flex p-2 pb-8;
+      .content-div {
+        @apply flex-1;
+        .product-name {
+          @apply mt-4 font-medium text-gray-900 lowercase;
+        }
+        .p-avalaible {
+          @apply text-gray-500 flex space-x-2;
+          .check {
+            @apply flex-none w-6 h-6 text-green-500 space-x-1;
+          }
+          .x {
+            @apply flex-none w-6 h-6 text-red-500 space-x-1;
+          }
+        }
+        > p:last-child {
+          @apply font-medium text-gray-900;
+        }
+      }
+      .cart {
+        @apply absolute -bottom-8 inset-x-2 px-2 py-3 my-2 border-solid rounded-md text-center font-semibold;
+        &.primary {
+          @apply text-primary-900 bg-indigo-200;
+        }
+        &.secondary {
+          @apply text-secondary-900 bg-yellow-50 border border-secondary-900;
+        }
+      }
+      .cart-open {
+        @apply absolute -bottom-8 flex space-y-0 inset-x-4 items-center justify-center;
+        .minus {
+          @apply px-2 py-2 my-2 border-solid rounded-md text-center font-semibold ;
+          &.primary {
+            @apply text-primary-900 bg-indigo-200;
+          }
+          &.secondary {
+            @apply text-secondary-900 bg-yellow-50 border border-secondary-900;
+          }
+        }
+        .input {
+          @apply shadow-sm  block sm:text-sm rounded-md mx-2 w-16 text-right h-10;
+          &.primary {
+            @apply text-gray-900 placeholder-gray-500 focus:ring-offset-primary-900 focus:ring-white focus:border-white border-primary-100;
+          }
+          &.secondary {
+            @apply text-gray-900 placeholder-gray-500 focus:ring-offset-gray-100 focus:ring-white focus:border-white border-secondary-900;
+          }
+        }
+        .plus {
+          @apply px-2 py-2 my-2 border-solid rounded-md text-center font-semibold ;
+          &.primary {
+            @apply text-primary-900 bg-indigo-200;
+          }
+          &.secondary {
+            @apply text-secondary-900 bg-yellow-50 border-secondary-900 border;
+          }
+        }
+      }
+    }
+  }
+}

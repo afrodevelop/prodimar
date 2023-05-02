@@ -1,0 +1,18 @@
+.category-filter {
+  @apply bg-white;
+}
+
+.section-main {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+
+}
+
+.product-heading {
+  @apply pt-6 pb-24;
+  > h2 {
+    @apply sr-only;
+  }
+  > div {
+    @apply grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10;
+  }
+}

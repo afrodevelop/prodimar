@@ -1,0 +1,231 @@
+// header mobile
+.content-header {
+  @apply bg-secondary-500;
+}
+
+.dialog-content {
+  @apply fixed inset-0 flex z-40;
+}
+
+.dialog {
+  @apply relative z-40 lg:hidden;
+}
+
+.dialog-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-25;
+}
+
+.dialog-panel {
+  @apply relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto;
+}
+
+.dialog-panel-close {
+  @apply px-4 pt-5 pb-2 flex justify-between;
+  button {
+    @apply -mr-2 pb-2 rounded-md inline-flex items-center justify-center text-gray-400 outline-none;
+    span {
+      @apply sr-only;
+    }
+    svg {
+      @apply h-6 w-6;
+    }
+  }
+}
+
+.tab-div {
+  @apply border-b border-gray-200;
+}
+
+.tab-list {
+  @apply -mb-px flex px-4 space-x-8;
+}
+
+.tab {
+  @apply flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-sans font-medium transition-all ;
+  &-selected {
+    &-primary {
+      @apply text-primary-700 border-primary-700;
+    }
+    &-secondary {
+      @apply text-secondary-700 border-secondary-700;
+    }
+  }
+  &-non-selected {
+    @apply text-gray-900 border-transparent;
+  }
+}
+
+.tab-panel {
+  @apply pt-10 pb-8 px-4 space-y-10;
+
+  .tab-div-category {
+    @apply relative aspect-square rounded-md bg-gray-100 overflow-hidden;
+    .image {
+      @apply object-center object-cover;
+    }
+    .div-flex {
+      @apply flex flex-col justify-end;
+      .div-overlay {
+        @apply p-4 bg-white bg-opacity-60 text-base sm:text-sm;
+        a {
+          @apply font-medium text-gray-900;
+        }
+        p {
+          @apply mt-0.5 text-gray-700 sm:mt-1;
+        }
+      }
+    }
+  }
+}
+
+.category-p {
+  @apply font-medium text-gray-900;
+}
+
+.category-ul {
+  @apply mt-6 flex flex-col space-y-6;
+  li {
+    @apply flow-root;
+    a {
+      @apply -m-2 p-2 block text-gray-500;
+    }
+  }
+}
+
+.diolag-navigation {
+  @apply border-t border-gray-200 py-6 px-4 space-y-6;
+  div {
+    @apply flow-root;
+    a {
+      @apply -m-2 p-2 block font-medium text-gray-900;
+    }
+  }
+}
+
+// header desktop
+.header {
+  @apply relative bg-white;
+}
+
+.nav {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.nav-div {
+  @apply border-b border-gray-200;
+}
+
+.nav-div-content {
+  @apply h-16 flex items-center justify-between;
+}
+
+.nav-div-mobile {
+  @apply flex-1 flex items-center lg:hidden;
+  button,
+  a {
+    @apply p-2 text-gray-400 outline-none;
+    span {
+      @apply sr-only;
+    }
+    svg {
+      @apply w-6 h-6;
+    }
+  }
+  button {
+    @apply -ml-2 bg-white rounded-md;
+  }
+  svg {
+    @apply ml-2 hover:text-gray-500;
+  }
+}
+
+.popover-group {
+  @apply hidden lg:flex-1 lg:block lg:self-stretch;
+  > div {
+    @apply h-full flex space-x-8;
+    .popover-div {
+      @apply relative flex;
+      .popover-button {
+        @apply relative z-10 flex items-center justify-center transition-colors ease-out duration-200 text-sm font-medium outline-none;
+        &-open {
+          &-primary {
+            @apply text-primary-600;
+          }
+          &-secondary {
+            @apply text-secondary-600;
+          }
+        }
+        &-close {
+          @apply text-gray-700 hover:text-gray-800;
+        }
+        .popover-button-span {
+          @apply absolute bottom-0 inset-x-0 h-0.5 transition-colors ease-out duration-200 sm:mt-5 sm:transform sm:translate-y-px ;
+          &-open {
+            &-primary {
+              @apply bg-primary-600;
+            }
+            &-secondary {
+              @apply bg-secondary-600
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.popover-panel {
+  @apply absolute top-full inset-x-0 z-40;
+  .popover-shadow {
+    @apply absolute inset-0 top-1/2 bg-white shadow;
+  }
+  .popover-div {
+    @apply relative bg-white;
+
+    > div {
+      @apply max-w-7xl mx-auto px-8;
+      > div {
+        @apply grid grid-cols-2 gap-y-10 gap-x-8 py-16;
+        .div-grid-1 {
+          @apply grid grid-rows-1 grid-cols-2 gap-8 text-sm;
+          .div-category {
+            @apply relative aspect-square rounded-md bg-gray-100 overflow-hidden;
+            &-0 {
+              @apply col-span-2 ;
+            }
+            .image {
+              @apply object-center object-cover group-hover:opacity-75;
+            }
+            .div-flex {
+              @apply flex flex-col justify-end;
+            }
+            .div-overlay {
+              @apply p-4 bg-white bg-opacity-60 text-sm;
+              a {
+                @apply font-medium text-gray-900;
+                span {
+                  @apply absolute inset-0;
+                }
+              }
+              p {
+                @apply mt-0.5 text-gray-700 sm:mt-1;
+              }
+            }
+          }
+        }
+        .div-grid-3 {
+          @apply grid grid-cols-3 gap-y-10 gap-x-8 text-sm text-gray-500;
+          .category-p {
+            @apply font-medium text-gray-900;
+          }
+          ul {
+            @apply mt-4 space-y-4;
+            a {
+              @apply hover:text-gray-800;
+            }
+          }
+        }
+      }
+    }
+  }
+}

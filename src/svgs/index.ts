@@ -1,0 +1,5 @@
+export * from './SVGDots'
+export * from './SVGDelivery'
+export * from './SVGDiscount'
+export * from './SVGEmptyCart'
+export * from './SVGEnviroment'
