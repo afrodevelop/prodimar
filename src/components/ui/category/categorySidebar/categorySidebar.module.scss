@@ -42,15 +42,7 @@
         @apply space-y-4;
         .option-filter {
           @apply flex items-center;
-          >input {
-            @apply h-4 w-4 border-gray-300 rounded ;
-            &.primary {
-              @apply text-primary-600 focus:ring-primary-500;
-            }
-            &.secondary {
-              @apply text-secondary-600 focus:ring-secondary-500;
-            }
-          }
+
           >label {
             @apply ml-3 text-sm text-gray-600;
           }
